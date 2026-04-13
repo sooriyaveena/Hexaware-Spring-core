@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   
+    <bean id="doc1" class="com.example.Doctor">
+        <property name="doctorId" value="101"/>
+        <property name="doctorName" value="Dr. Smith"/>
+        <property name="specialization" value="Cardiology"/>
+    </bean>
+
+
+    <bean id="pat1" class="com.example.Patient">
+        <property name="patientId" value="1"/>
+        <property name="patientName" value="John"/>
+
+       
+        <property name="doctor" ref="doc1"/>
+    </bean>
+
+</beans>
